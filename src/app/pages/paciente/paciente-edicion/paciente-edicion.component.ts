@@ -10,9 +10,9 @@ import { PacienteService } from 'src/app/_service/paciente.service';
 })
 export class PacienteEdicionComponent implements OnInit {
 
-  form!: FormGroup;
-  id!: number;
-  edicion!: boolean;
+  form: FormGroup;
+  id: number;
+  edicion: boolean;
 
   constructor(
     private route: ActivatedRoute,

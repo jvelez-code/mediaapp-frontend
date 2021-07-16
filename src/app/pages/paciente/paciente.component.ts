@@ -13,9 +13,9 @@ import { MatPaginator } from '@angular/material/paginator';
 export class PacienteComponent implements OnInit {
   
   displayedColumns = ['idPaciente', 'nombres', 'apellidos', 'acciones'];
-  dataSource!: MatTableDataSource<Paciente>;
-  @ViewChild(MatSort) sort!: MatSort;
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  dataSource: MatTableDataSource<Paciente>;
+  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
   
   constructor(private pacienteService: PacienteService) { }
 
