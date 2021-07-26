@@ -8,7 +8,7 @@ export class MatPaginatorImpl extends MatPaginatorIntl{
     nextPageLabel = 'Siguiente';
     previousPageLabel = 'Atrás';
 
-    getRangeLabel = function (page, pageSize, length) {
+    getRangeLabel = function (page: number, pageSize: number, length: number) {
         if (length === 0 || pageSize === 0) {
             return '0 de ' + length;
         }

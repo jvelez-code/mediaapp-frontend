@@ -1,7 +1,7 @@
 <mat-card>Ingrese los datos del paciente</mat-card>
 
 <!-- No olvidar agregar ReactiveFormsModule en App.module.ts, util para trabajar con formularios-->
-<form class="example-container" [formGroup]="form" #frmPaciente="ngForm" >
+<form class="example-container" [formGroup]="form" #frmPaciente="ngForm"  (ngSubmit)="operar()">
 
     <div [hidden]="true">
         <mat-form-field class="example-full-width">
@@ -29,6 +29,10 @@
         <input matInput placeholder="Direccion" required formControlName="direccion">
     </mat-form-field>
 
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email" required formControlName="email">
+    </mat-form-field>
+
     <button mat-raised-button color="primary" type="submit" [disabled]="frmPaciente.invalid">
         <mat-icon>done</mat-icon>
         <span>Aceptar</span>
@@ -38,4 +42,4 @@
         <span>Cancelar</span>
     </button>
 
-</form>
+ </form>
